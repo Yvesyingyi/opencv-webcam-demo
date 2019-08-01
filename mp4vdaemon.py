@@ -27,12 +27,12 @@ while True:
         out.release()
         break
     # creates buffer file, one file for 500 frames
-    if a % 100 == 0:
+    if a % 75 == 0:
         # close the file if previous one has finished writing
         if a != 0:
             out.release()
         # create file, number as index
-        out = cv2.VideoWriter("{}.mp4".format(frame_count),fourcc, 20.0, (frame_width,frame_height))
+        out = cv2.VideoWriter("{}.mp4".format(frame_count),fourcc, 15.0, (frame_width,frame_height))
         frame_count += 1
         # Write the frame into the file 'output.avi'
         out.write(frame)
